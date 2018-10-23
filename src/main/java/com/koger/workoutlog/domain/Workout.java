@@ -1,18 +1,21 @@
 package com.koger.workoutlog.domain;
 
 import java.time.LocalDateTime;
-import java.util.Optional;
+
+import org.springframework.data.annotation.Id;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class Workout {
+    @Id
+    private String id;
     private final LocalDateTime date;
     private final WorkoutType workoutType;
     private final String place;
     private final Attempt[] attempts;
-    private final Optional<String[]> notes;
+    private final String[] notes;
 
     public Workout(@JsonProperty("date") LocalDateTime date, @JsonProperty("workoutType") WorkoutType workoutType,
         @JsonProperty("place") String place, @JsonProperty("attempts") Attempt[] attempts, @JsonProperty("notes") String[] notes) {
@@ -20,7 +23,11 @@ public class Workout {
         this.workoutType = workoutType;
         this.place = place;
         this.attempts = attempts;
-        this.notes = Optional.ofNullable(notes);
+        this.notes = notes;
+    }
+
+    public String getId() {
+        return id;
     }
 
     public LocalDateTime getDate() {
@@ -40,7 +47,11 @@ public class Workout {
     }
 
     public String[] getNotes() {
-        return notes.orElse(null);
+        return notes;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 
 }
