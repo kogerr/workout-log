@@ -8,5 +8,7 @@ public enum WorkoutType {
     @JsonProperty("secured")
     SECURED,
     @JsonProperty("outdoor")
-    OUTDOOR
+    OUTDOOR,
+    @JsonProperty("mixed")
+    MIXED
 }
