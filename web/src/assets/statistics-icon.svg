@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 100 75" style="enable-background:new 0 0 100 75;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:none;stroke:#80C6FF;stroke-miterlimit:10;}
+	.st1{fill:#80C6FF;}
+</style>
+<rect id="XMLID_1_" x="0.5" y="0.5" class="st0" width="99" height="74"/>
+<line id="XMLID_44_" class="st0" x1="2.5" y1="13" x2="97.5" y2="13"/>
+<line id="XMLID_2_" class="st0" x1="2.5" y1="25" x2="97.5" y2="25"/>
+<line id="XMLID_45_" class="st0" x1="2.5" y1="37" x2="97.5" y2="37"/>
+<line id="XMLID_46_" class="st0" x1="2.5" y1="49" x2="97.5" y2="49"/>
+<line id="XMLID_47_" class="st0" x1="2.5" y1="61" x2="97.5" y2="61"/>
+<line id="XMLID_3_" class="st0" x1="14" y1="1.5" x2="14" y2="73.5"/>
+<line id="XMLID_4_" class="st0" x1="26" y1="1.5" x2="26" y2="73.5"/>
+<line id="XMLID_5_" class="st0" x1="38" y1="1.5" x2="38" y2="73.5"/>
+<line id="XMLID_6_" class="st0" x1="50" y1="1.5" x2="50" y2="73.5"/>
+<line id="XMLID_7_" class="st0" x1="62" y1="1.5" x2="62" y2="73.5"/>
+<line id="XMLID_8_" class="st0" x1="74" y1="1.5" x2="74" y2="73.5"/>
+<line id="XMLID_9_" class="st0" x1="86" y1="1.5" x2="86" y2="73.5"/>
+<polygon id="XMLID_15_" class="st1" points="0,67.5 0,61.8 18.9,31.2 21,33.5 "/>
+<polygon id="XMLID_16_" class="st1" points="46.5,64.1 43.9,62.7 67,17.8 68.9,20.8 "/>
+<polygon id="XMLID_17_" class="st1" points="81.8,41.7 79.3,43.3 65.4,20.9 67.9,19.2 "/>
+<polygon id="XMLID_18_" class="st1" points="79.3,43.3 78.1,40.6 99.4,31.2 100,34.2 "/>
+<polygon id="XMLID_19_" class="st1" points="47.3,62.5 45.9,65.4 17.8,34.5 20,32.4 "/>
+</svg>
