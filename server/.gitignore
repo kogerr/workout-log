@@ -1,5 +1,8 @@
 /bundles/
 
+### Frontend ###
+src/main/resources/static
+
 ### Maven ###
 target/
 logs/
