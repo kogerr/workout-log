@@ -10,7 +10,7 @@ public class BoulderTrack extends Track {
     private final Integer number;
 
     @JsonCreator
-    public BoulderTrack(@JsonProperty("colour") Colour colour, @JsonProperty("secondaryColour") Colour secondaryColour, Integer number) {
+    public BoulderTrack(@JsonProperty("colour") Colour colour, @JsonProperty("secondaryColour") Colour secondaryColour, @JsonProperty("number") Integer number) {
         super(colour);
         this.secondaryColour = secondaryColour;
         this.number = number;
