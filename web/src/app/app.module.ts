@@ -3,13 +3,18 @@ import { NgModule } from '@angular/core';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { AuthenticationInterceptor } from './service/auth.interceptor';
+import { AppRoutingModule } from './app-routing.module';
+import { HeaderComponent } from './header/header.component';
+import { CalendarComponent } from './calendar/calendar.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HeaderComponent,
+    CalendarComponent
   ],
   imports: [
-    BrowserModule, HttpClientModule
+    BrowserModule, HttpClientModule, AppRoutingModule
   ],
   providers: [{
     provide: HTTP_INTERCEPTORS,
@@ -18,4 +23,5 @@ import { AuthenticationInterceptor } from './service/auth.interceptor';
   }],
   bootstrap: [AppComponent]
 })
+
 export class AppModule { }
