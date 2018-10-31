@@ -1,8 +1,6 @@
-<div class="menu header-grid">
-  <img src="assets/calendar-icon.svg" alt="" style="grid-column: 5;">
-  <img src="assets/statistics-icon.svg" alt="">
-  <img src="assets/plus-icon.svg" alt="">
+<div style="display:grid;" [style.grid-template-columns]="columns" [style.padding]="gapSize + 'vw'" [style.grid-column-gap]="gapSize + 'vw'">
+  <img *ngFor="let item of menuItems; index as i" [src]="'assets/' + item.image" [style.grid-column]="slots - menuItems.length + i + 1" [routerLink]="item.path" [style.width]="slotSize + 'vw'">
 </div>
-<div class="line line-height header-grid">
-  <div class="cursor" style="grid-column: 5;"></div>
+<div class="line line-height header-grid" [style.grid-template-columns]="columns" [style.padding]="'0 ' + gapSize + 'vw'" [style.grid-column-gap]="gapSize + 'vw'">
+  <div class="cursor" style="grid-column: -2"></div>
 </div>
