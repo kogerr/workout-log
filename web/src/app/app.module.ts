@@ -6,12 +6,14 @@ import { AuthenticationInterceptor } from './service/auth.interceptor';
 import { AppRoutingModule } from './app-routing.module';
 import { HeaderComponent } from './header/header.component';
 import { CalendarComponent } from './calendar/calendar.component';
+import { StatisticsComponent } from './statistics/statistics.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    CalendarComponent
+    CalendarComponent,
+    StatisticsComponent
   ],
   imports: [
     BrowserModule, HttpClientModule, AppRoutingModule

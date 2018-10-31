@@ -20,4 +20,5 @@
 
 .cursor {
     background-color: #FFC680;
+    transition: all 1000ms;
 }

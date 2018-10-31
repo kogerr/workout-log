@@ -1,6 +1,7 @@
-<div style="display:grid;" [style.grid-template-columns]="columns" [style.padding]="gapSize + 'vw'" [style.grid-column-gap]="gapSize + 'vw'">
-  <img *ngFor="let item of menuItems; index as i" [src]="'assets/' + item.image" [style.grid-column]="slots - menuItems.length + i + 1" [routerLink]="item.path" [style.width]="slotSize + 'vw'">
+<div style="display:grid;" [ngStyle]="getColumns()" [style.padding]="gapSize + 'vw'" [style.grid-column-gap]="gapSize + 'vw'">
+  <img *ngFor="let item of menuItems; index as i" [src]="'assets/' + item.image" [style.grid-column]="slots - menuItems.length + i + 1"
+    [routerLink]="item.path" [style.width]="slotSize + 'vw'">
 </div>
-<div class="line line-height header-grid" [style.grid-template-columns]="columns" [style.padding]="'0 ' + gapSize + 'vw'" [style.grid-column-gap]="gapSize + 'vw'">
-  <div class="cursor" style="grid-column: -2"></div>
+<div class="line line-height header-grid" [ngStyle]="getColumns()" [style.padding]="'0 ' + gapSize + 'vw'" [style.grid-column-gap]="gapSize + 'vw'">
+  <div class="cursor" [style.grid-column]="slots - menuItems.length + cursor + 1"></div>
 </div>

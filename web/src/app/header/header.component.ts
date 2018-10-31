@@ -1,5 +1,6 @@
-import { Component, OnInit, HostBinding, Input } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
+import { Component, OnInit, Input } from '@angular/core';
+import { ActivatedRoute, Router, NavigationStart } from '@angular/router';
+import { filter } from 'rxjs/operators';
 
 @Component({
   selector: 'app-header',
@@ -12,33 +13,35 @@ export class HeaderComponent implements OnInit {
   gapSize: number;
   slotSize: number;
   columns: string;
+  cursor = 0;
 
   menuItems = [
-    {path: 'calendar', image: 'calendar-icon.svg'},
-    {path: 'statistics', image: 'statistics-icon.svg'},
-    {path: 'add', image: 'plus-icon.svg'}
+    { path: '/calendar', image: 'calendar-icon.svg' },
+    { path: '/statistics', image: 'statistics-icon.svg' },
+    { path: '/add', image: 'plus-icon.svg' }
   ];
 
-  constructor(private router: Router, private route: ActivatedRoute) { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
     this.calculateSizes();
+    this.bindCursor();
   }
 
   calculateSizes(): void {
-    console.log(this.slots, this.gapRatio);
-    console.log(this.slots * (+this.gapRatio + 1) + 1);
     this.gapSize = 100 / (this.slots * (+this.gapRatio + 1) + 1);
     this.slotSize = this.gapSize * this.gapRatio;
-    this.buildColumns();
   }
 
-  buildColumns(): void {
-    let columns = '';
-    for (let i = 0; i < this.slots; i++) {
-      columns += this.slotSize + 'vw ';
-    }
-    this.columns = columns.trimRight();
+  getColumns(): any {
+    return { 'grid-template-columns': `repeat(${this.slots}, ${this.slotSize}vw)` };
+  }
+
+  bindCursor(): void {
+    this.router.events.pipe(filter(e => e instanceof NavigationStart))
+      .subscribe(e => {
+        this.cursor = this.menuItems.findIndex(item => item.path === (e as NavigationStart).url);
+      });
   }
 
 }
