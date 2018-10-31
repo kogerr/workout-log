@@ -41,7 +41,8 @@ export class HeaderComponent implements OnInit {
     this.router.events.pipe(filter(e => e instanceof NavigationStart))
       .subscribe(e => {
         let selectedItem = this.menuItems.findIndex(item => item.path === (e as NavigationStart).url);
-        this.cursor = selectedItem >= 0 ? selectedItem : 0;
+        selectedItem = selectedItem >= 0 ? selectedItem : 0;
+        this.cursor = this.slots - this.menuItems.length + selectedItem;
       });
   }
 
