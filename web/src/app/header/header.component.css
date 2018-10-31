@@ -5,3 +5,36 @@
     grid-template-columns: 1fr;
     grid-template-rows: auto auto;
 }
+
+.menu {
+    padding-top: 2vw;
+    padding-bottom: 2vw;
+}
+
+.header-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-column-gap: 2vw;
+    padding-right: 2vw;
+    padding-left: 2vw;
+}
+
+.menu img {
+    width: 12vw;
+}
+
+.page-icons {
+    float: right;
+}
+
+.line {
+    background-color: #80C6FF;
+}
+
+.line-height {
+    height: 1vw;
+}
+
+.cursor {
+    background-color: #FFC680;
+}
