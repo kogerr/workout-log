@@ -7,13 +7,15 @@ import { AppRoutingModule } from './app-routing.module';
 import { HeaderComponent } from './header/header.component';
 import { CalendarComponent } from './calendar/calendar.component';
 import { StatisticsComponent } from './statistics/statistics.component';
+import { MonthComponent } from './calendar/month/month.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     CalendarComponent,
-    StatisticsComponent
+    StatisticsComponent,
+    MonthComponent
   ],
   imports: [
     BrowserModule, HttpClientModule, AppRoutingModule
