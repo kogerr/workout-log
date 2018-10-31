@@ -1,0 +1,28 @@
+:host {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto;
+    grid-row-gap: 1vw;
+}
+
+.month-header {
+    height: 15vw;
+    box-sizing: border-box;
+    text-align: center;
+    padding: 5vw;
+    font-size: 5vw;
+    background-color: aqua;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.table {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-column-gap: 1vw;
+    grid-row-gap: 1vw;
+}
+
+.day {
+    background-color: aqua;
+    height: 7.5vw;
+}

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { RestService } from '../service/rest.service';
 import { Workout } from '../domain/workout';
+import { Month } from './month';
 
 @Component({
   selector: 'app-calendar',
@@ -9,6 +10,7 @@ import { Workout } from '../domain/workout';
 })
 export class CalendarComponent implements OnInit {
   workouts = new Array<Array<Array<Workout>>>(12);
+  months = new Array<Month>();
 
   constructor(private restService: RestService) { }
 
@@ -23,21 +25,20 @@ export class CalendarComponent implements OnInit {
       let month = workoutDate.getMonth();
       let day = workoutDate.getDate();
 
-      if (!this.workouts[month]) {
-        let monthLength = this.getMonthLength(year, month);
-        this.workouts[month] = new Array(monthLength);
+      let targetMonth: Month;
+      if (!this.months || this.months.findIndex(m => m.monthNumber === month) < 0) {
+        targetMonth = new Month(year, month);
+        this.months.push(targetMonth);
+      } else {
+        targetMonth = this.months.find(m => m.monthNumber === month);
       }
 
-      if (!this.workouts[month][day]) {
-        this.workouts[month][day] = new Array();
+      if (!targetMonth.days[day]) {
+        targetMonth.days[day] = new Array<Workout>();
       }
 
-      this.workouts[month][day].push(workout);
+      targetMonth.days[day].push(workout);
     });
-  }
-
-  getMonthLength(year: number, month: number): number {
-    return new Date(year, month + 1, 0).getDate();
   }
 
 }
