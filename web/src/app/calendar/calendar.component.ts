@@ -24,12 +24,10 @@ export class CalendarComponent implements OnInit {
       let month = workoutDate.getMonth();
       let day = workoutDate.getDate();
 
-      let targetMonth: Month;
-      if (!this.months || this.months.findIndex(m => m.monthNumber === month) < 0) {
+      let targetMonth = this.months.find(m => m.monthNumber === month);
+      if (!targetMonth) {
         targetMonth = new Month(year, month);
         this.months.push(targetMonth);
-      } else {
-        targetMonth = this.months.find(m => m.monthNumber === month);
       }
 
       if (!targetMonth.days[day]) {

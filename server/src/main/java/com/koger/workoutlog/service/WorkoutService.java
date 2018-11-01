@@ -28,13 +28,12 @@ public class WorkoutService {
         return currentUser.getWorkouts();
     }
 
-    public Workout addWorkout(Workout newWorkout, String authorization) {
+    public User addWorkout(Workout newWorkout, String authorization) {
         String emailAddress = authorization;
         User currentUser = userRepository.getByEmailAddress(emailAddress);
         Workout storedWorkout = workoutRepository.insert(newWorkout);
         currentUser.getWorkouts().add(storedWorkout);
-        userRepository.save(currentUser);
-        return storedWorkout;
+        return userRepository.save(currentUser);
     }
 
     public User addUser(User newUser) {

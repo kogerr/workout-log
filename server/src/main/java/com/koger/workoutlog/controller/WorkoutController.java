@@ -27,7 +27,7 @@ public class WorkoutController {
     }
 
     @RequestMapping(value = "/api/workout", method = RequestMethod.POST)
-    public Workout addWorkout(@RequestBody Workout newWorkout, @RequestHeader("Authorization") String authorization) {
+    public User addWorkout(@RequestBody Workout newWorkout, @RequestHeader("Authorization") String authorization) {
         return workoutService.addWorkout(newWorkout, authorization);
     }
 

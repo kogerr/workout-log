@@ -3,11 +3,14 @@ package com.koger.workoutlog.domain;
 import java.util.List;
 import java.util.Optional;
 
+import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.DBRef;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class User {
+    @Id
+    private String id;
     private final String emailAddress;
     private final Optional<Objective> objective;
     @DBRef
@@ -25,6 +28,10 @@ public class User {
 
     public List<Workout> getWorkouts() {
         return workouts;
+    }
+
+    public String getId() {
+        return id;
     }
 
 }
