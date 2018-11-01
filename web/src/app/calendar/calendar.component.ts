@@ -9,7 +9,6 @@ import { Month } from './month';
   styleUrls: ['./calendar.component.css']
 })
 export class CalendarComponent implements OnInit {
-  workouts = new Array<Array<Array<Workout>>>(12);
   months = new Array<Month>();
 
   constructor(private restService: RestService) { }
