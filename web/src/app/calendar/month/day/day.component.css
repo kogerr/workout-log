@@ -1,0 +1,23 @@
+:host {
+    font-size: 4vw;
+    height: 7.5vw;
+    padding: 0.7vw 1vw;
+    box-sizing: border-box;
+}
+
+:host(.blue) {
+    background-color: #80c6ff;
+}
+
+:host(.orange) {
+    background-color: #FFC680;
+}
+
+
+:host(.green) {
+    background-color: #80ffc6;
+}
+
+:host(.empty) {
+    background-color: #dfeff7;
+}

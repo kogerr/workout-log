@@ -23,11 +23,3 @@
     grid-column-gap: 1vw;
     grid-row-gap: 1vw;
 }
-
-.day {
-    font-size: 4vw;
-    background-color: #dfeff7;
-    height: 7.5vw;
-    padding: 0.5vw 1vw;
-    box-sizing: border-box;
-}

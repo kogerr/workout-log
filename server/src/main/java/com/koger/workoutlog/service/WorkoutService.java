@@ -1,6 +1,7 @@
 package com.koger.workoutlog.service;
 
 import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
@@ -25,7 +26,9 @@ public class WorkoutService {
     public List<Workout> getWorkouts(String authorization) {
         String emailAddress = authorization;
         User currentUser = userRepository.getByEmailAddress(emailAddress);
-        return currentUser.getWorkouts();
+        List<Workout> workouts = currentUser.getWorkouts();
+        workouts.sort(Comparator.comparing(Workout::getDate));
+        return workouts;
     }
 
     public User addWorkout(Workout newWorkout, String authorization) {

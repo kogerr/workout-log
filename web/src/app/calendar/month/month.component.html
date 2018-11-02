@@ -1,6 +1,6 @@
 <div class="month-header">{{content.name}}</div>
 <div class="table">
   <div *ngIf="getOffset()" class="offset" [style.grid-column]="getOffset()"></div>
-  <div *ngFor="let day of content.days; index as i" class="day">{{i + 1}}</div>
+  <app-day *ngFor="let day of content.days; index as i" [workouts]="day" [number]="i + 1"></app-day>
 </div>
 

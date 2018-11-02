@@ -8,6 +8,7 @@ import { HeaderComponent } from './header/header.component';
 import { CalendarComponent } from './calendar/calendar.component';
 import { StatisticsComponent } from './statistics/statistics.component';
 import { MonthComponent } from './calendar/month/month.component';
+import { DayComponent } from './calendar/month/day/day.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { MonthComponent } from './calendar/month/month.component';
     HeaderComponent,
     CalendarComponent,
     StatisticsComponent,
-    MonthComponent
+    MonthComponent,
+    DayComponent
   ],
   imports: [
     BrowserModule, HttpClientModule, AppRoutingModule

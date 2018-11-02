@@ -1,6 +1,6 @@
 export enum WorkoutType {
-    boulder,
-    secured,
-    outdoor,
-    miced
+    boulder = 'boulder',
+    secured = 'boulder',
+    outdoor = 'outdoor',
+    mixed = 'mixed'
 }
