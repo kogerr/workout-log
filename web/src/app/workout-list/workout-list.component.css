@@ -1,0 +1,6 @@
+:host {
+  height: calc(100vh - 13.90625vw);
+  box-sizing: border-box;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}

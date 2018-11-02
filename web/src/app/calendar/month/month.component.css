@@ -4,8 +4,6 @@
     grid-template-rows: auto auto;
     grid-row-gap: 1vw;
     height: min-content;
-    color: #664F35;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .month-header {

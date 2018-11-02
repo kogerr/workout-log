@@ -1,0 +1,26 @@
+:host {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-row-gap: 2vw;
+    width: 90vw;
+    height: min-content;
+    margin: 5vw;
+}
+
+.workout-header {
+    display: grid;
+    grid-template-columns: auto min-content min-content;
+    grid-column-gap: 2vw;
+}
+
+.workout-header > div {
+    padding: 5.5vw 5vw 4.5vw 5vw;
+}
+
+.boulder {
+    background-color: #dfeff7;
+}
+
+.attempt {
+    padding: 2.25vw;
+}

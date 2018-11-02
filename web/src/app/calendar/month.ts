@@ -1,7 +1,7 @@
-import { Workout } from '../domain/workout';
+import {Workout} from '../domain/workout';
 
 const monthNames = ['January', 'February', 'March', 'April', 'May', 'June',
-  'July', 'August', 'September', 'October', 'November', 'December'];
+    'July', 'August', 'September', 'October', 'November', 'December'];
 
 export class Month {
     days: Array<Array<Workout>>;
@@ -19,6 +19,13 @@ export class Month {
         this.days = new Array<Array<Workout>>(length);
         this.monthNumber = month;
         this.year = year;
+    }
+
+    public addWorkout(day: number, workout: Workout): void {
+        if (!this.days[day]) {
+            this.days[day] = new Array<Workout>();
+        }
+        this.days[day].push(workout);
     }
 
 }

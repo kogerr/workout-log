@@ -9,6 +9,8 @@ import { CalendarComponent } from './calendar/calendar.component';
 import { StatisticsComponent } from './statistics/statistics.component';
 import { MonthComponent } from './calendar/month/month.component';
 import { DayComponent } from './calendar/month/day/day.component';
+import { WorkoutListComponent } from './workout-list/workout-list.component';
+import { WorkoutComponent } from './workout-list/workout/workout.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +19,9 @@ import { DayComponent } from './calendar/month/day/day.component';
     CalendarComponent,
     StatisticsComponent,
     MonthComponent,
-    DayComponent
+    DayComponent,
+    WorkoutListComponent,
+    WorkoutComponent
   ],
   imports: [
     BrowserModule, HttpClientModule, AppRoutingModule
