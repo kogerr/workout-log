@@ -35,7 +35,7 @@ export class WorkoutComponent implements OnInit {
     private setDate(date: any): void {
         let {month, day}: { month: number, day: number } = DateTransformer.decompose(new Date(date));
         this.month = romanNumbers[month];
-        this.day = day + 1;
+        this.day = day;
     }
 
     private setColour(): void {
