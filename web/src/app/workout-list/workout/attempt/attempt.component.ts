@@ -32,7 +32,7 @@ export class AttemptComponent implements OnInit {
         return workoutColourMap.get(this.content.track.type);
     }
 
-    private getGradeColumns(): string {
+    getGradeColumns(): string {
         return this.content.track.secondaryColour && this.content.track.grade ? 'auto auto' : 'auto';
     }
 

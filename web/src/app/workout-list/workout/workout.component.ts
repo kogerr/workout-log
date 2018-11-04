@@ -42,11 +42,11 @@ export class WorkoutComponent implements OnInit {
         this.colourClass = workoutColourMap.get(this.content.workoutType);
     }
 
-    private unselect(): void {
+    unselect(): void {
         this.workoutSelector.clear();
     }
 
-    private deleteWorkout(): void {
+    deleteWorkout(): void {
         this.unselect();
         this.restService.deleteWorkout(this.content.id).subscribe(() => this.router.navigate(['/calendar']));
     }
