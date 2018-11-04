@@ -3,4 +3,5 @@
   <div [class]="content.workoutType">{{month}}</div>
   <div [class]="content.workoutType">{{day}}</div>
 </div>
-<div [class]="content.workoutType + ' attempt small-font'">6a+ Simán ment</div>
+<app-attempt *ngFor="let attempt of content.attempts" [content]="attempt"></app-attempt>
+<div [class]="content.workoutType + ' attempt '">6a+ Simán ment</div>

@@ -11,6 +11,7 @@ import { MonthComponent } from './calendar/month/month.component';
 import { DayComponent } from './calendar/month/day/day.component';
 import { WorkoutListComponent } from './workout-list/workout-list.component';
 import { WorkoutComponent } from './workout-list/workout/workout.component';
+import { AttemptComponent } from './workout-list/workout/attempt/attempt.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { WorkoutComponent } from './workout-list/workout/workout.component';
     MonthComponent,
     DayComponent,
     WorkoutListComponent,
-    WorkoutComponent
+    WorkoutComponent,
+    AttemptComponent
   ],
   imports: [
     BrowserModule, HttpClientModule, AppRoutingModule

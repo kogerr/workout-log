@@ -21,6 +21,10 @@
     background-color: #dfeff7;
 }
 
-.attempt {
-    padding: 2.25vw;
+.outdoor {
+    background-color: #dff7ef;
+}
+
+.secured {
+    background-color: #f7efdf;
 }

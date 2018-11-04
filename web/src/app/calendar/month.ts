@@ -22,10 +22,11 @@ export class Month {
     }
 
     public addWorkout(day: number, workout: Workout): void {
-        if (!this.days[day]) {
-            this.days[day] = new Array<Workout>();
+        let targetDay = day - 1;
+        if (!this.days[targetDay]) {
+            this.days[targetDay] = new Array<Workout>();
         }
-        this.days[day].push(workout);
+        this.days[targetDay].push(workout);
     }
 
 }

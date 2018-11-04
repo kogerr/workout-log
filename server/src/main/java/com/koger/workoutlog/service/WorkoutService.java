@@ -6,10 +6,10 @@ import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
-import org.springframework.stereotype.Service;
-
 import com.koger.workoutlog.domain.User;
 import com.koger.workoutlog.domain.Workout;
+import org.springframework.stereotype.Service;
+
 import com.koger.workoutlog.repositories.UserRepository;
 import com.koger.workoutlog.repositories.WorkoutRepository;
 

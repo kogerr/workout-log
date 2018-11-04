@@ -1,10 +1,10 @@
 import { Attempt } from './attempt';
-import { WorkoutType } from './workout-type';
+import { ClimbType } from './climb-type';
 
 export interface Workout {
     id: string;
     date: Date;
-    workoutType: WorkoutType;
+    workoutType: ClimbType;
     place: string;
     attempts: Array<Attempt>;
     notes: Array<string>;

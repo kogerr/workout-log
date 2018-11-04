@@ -12,12 +12,12 @@ public class Workout {
     @Id
     private String id;
     private final LocalDateTime date;
-    private final WorkoutType workoutType;
+    private final ClimbType workoutType;
     private final String place;
     private final Attempt[] attempts;
     private final String[] notes;
 
-    public Workout(@JsonProperty("date") LocalDateTime date, @JsonProperty("workoutType") WorkoutType workoutType,
+    public Workout(@JsonProperty("date") LocalDateTime date, @JsonProperty("workoutType") ClimbType workoutType,
         @JsonProperty("place") String place, @JsonProperty("attempts") Attempt[] attempts, @JsonProperty("notes") String[] notes) {
         this.date = date;
         this.workoutType = workoutType;
@@ -34,7 +34,7 @@ public class Workout {
         return date;
     }
 
-    public WorkoutType getWorkoutType() {
+    public ClimbType getWorkoutType() {
         return workoutType;
     }
 

@@ -5,7 +5,7 @@ import {WorkoutSelectorService} from '../../../workout-selector.service';
 
 const workoutColourMap = new Map([
     ['boulder', 'blue'],
-    ['secured', 'orange'],
+    ['roped', 'orange'],
     ['outdoor', 'green']
 ]);
 
