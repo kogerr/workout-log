@@ -17,14 +17,17 @@
     padding: 5.5vw 5vw 4.5vw 5vw;
 }
 
-.boulder {
-    background-color: #dfeff7;
+.options {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 2vw;
 }
 
-.outdoor {
-    background-color: #dff7ef;
+.options > div {
+    padding: 5.5vw 5vw 4.5vw 5vw;
+    text-align: center;
 }
 
-.secured {
-    background-color: #f7efdf;
+.note {
+    padding: 2vw 1.75vw 1.5vw 1.75vw;
 }

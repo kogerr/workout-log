@@ -1,7 +1,7 @@
 <div style="display:grid;" [ngStyle]="getColumns()" [style.padding]="gapSize + 'vw'" [style.grid-column-gap]="gapSize + 'vw'">
   <img *ngFor="let item of menuItems; index as i" [src]="'assets/' + item.image" [style.grid-column]="slots - menuItems.length + i + 1"
-    [routerLink]="item.path" [style.width]="slotSize + 'vw'">
+    [routerLink]="item.path" [style.width]="slotSize + 'vw'" [alt]="item.path">
 </div>
-<div class="line line-height" [style.padding]="'0 ' + gapSize + 'vw'">
-  <div class="cursor line-height" [style.width]="slotSize + 'vw'" [style.margin-left]="(cursor * (slotSize + gapSize)) + 'vw'"></div>
+<div class="blue line-height" [style.padding]="'0 ' + gapSize + 'vw'">
+  <div class="cursor orange line-height" [style.width]="slotSize + 'vw'" [style.margin-left]="(cursor * (slotSize + gapSize)) + 'vw'"></div>
 </div>

@@ -1,2 +1,7 @@
+<div [class]="content.track.colour + ' track '" [style.grid-template-columns]="getGradeColumns()">
+    <div *ngIf="content.track.secondaryColour" [class]="content.track.secondaryColour + ' secondary-colour'"></div>
+    <div *ngIf="content.track.grade" class="grade small-font">{{content.track.grade.french}} ({{content.track.grade.uiaa}})</div>
+</div>
+<div *ngIf="content.track.number" class="text-padding small-font">#{{content.track.number}}</div>
 <img [src]="content.success ? 'assets/plus-icon.svg' : 'assets/plus-icon.svg'" alt="success mark" class="mark">
-<div class="note small-font">{{content.note}}</div>
+<div class="text-padding small-font">{{content.note}}</div>

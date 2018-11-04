@@ -16,4 +16,8 @@ export class RestService {
     return this.http.get<Array<Workout>>(workoutURL);
   }
 
+  deleteWorkout(id: string): Observable<Array<Workout>> {
+      return this.http.delete<Array<Workout>>(workoutURL + '/' + id);
+  }
+
 }

@@ -1,9 +1,42 @@
+:host {
+    display: grid;
+    height: 7.5vw;
+    white-space: nowrap;
+    grid-column-gap: 1.75vw;
+    padding-right: 1.75vw;
+}
+
+:host(.three-column-grid) {
+    grid-template-columns: repeat(2, min-content) auto;
+}
+
+:host(.four-column-grid) {
+    grid-template-columns: repeat(3, min-content) auto;
+}
+
+.secondary-colour {
+    height: 4vw;
+    width: 4vw;
+    margin: 1.75vw 0;
+}
+
+.track {
+    display: grid;
+    grid-column-gap: 1.75vw;
+    padding: 0 1.75vw;
+}
+
 .mark {
-    height: 5vw;
-    padding: 2.25vw;
+    height: 4vw;
+    width: 4vw;
+    margin: 1.75vw 0;
     background-color: white;
 }
 
-.note {
-    padding: 2.25vw;
+.text-padding {
+    padding: 2vw 0 1.5vw 0;
+}
+
+.grade {
+    padding: 2vw 0 1.5vw 0;
 }

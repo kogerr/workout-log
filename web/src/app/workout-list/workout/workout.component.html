@@ -1,7 +1,12 @@
 <div class="workout-header middle-font">
-  <div [class]="content.workoutType">{{content.place}}</div>
-  <div [class]="content.workoutType">{{month}}</div>
-  <div [class]="content.workoutType">{{day}}</div>
+  <div [class]="colourClass">{{content.place}}</div>
+  <div [class]="colourClass">{{month}}</div>
+  <div [class]="colourClass">{{day}}</div>
 </div>
 <app-attempt *ngFor="let attempt of content.attempts" [content]="attempt"></app-attempt>
-<div [class]="content.workoutType + ' attempt '">6a+ Simán ment</div>
+<div *ngFor="let note of content.notes" [class]="colourClass + ' note small-font'">{{note}}</div>
+<div class="options middle-font">
+    <div [class]="colourClass">Edit</div>
+    <div [class]="colourClass" (click)="deleteWorkout()" routerLink="/calendar">Delete</div>
+    <div [class]="colourClass" (click)="unselect()" routerLink="/calendar">Back</div>
+</div>

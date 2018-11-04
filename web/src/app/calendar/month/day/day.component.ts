@@ -38,7 +38,7 @@ export class DayComponent implements OnInit {
 
     private decideColour(): void {
         if (!this.workouts) {
-            this.class = 'empty';
+            this.class = 'light-blue';
         } else {
             let firstWorkoutType = this.workouts[0].workoutType;
             this.class = workoutColourMap.get(firstWorkoutType);

@@ -1,5 +1,4 @@
 :host {
-    display: block;
     overflow: hidden;
     display: grid;
     grid-template-columns: 1fr;
@@ -14,15 +13,10 @@ img:focus {
     display: grid;
 }
 
-.line {
-    background-color: #80C6FF;
-}
-
 .line-height {
     height: 1vw;
 }
 
 .cursor {
-    background-color: #FFC680;
     transition: all 500ms;
 }
