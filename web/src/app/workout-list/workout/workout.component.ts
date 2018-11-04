@@ -3,6 +3,7 @@ import {Workout} from '../../domain/workout';
 import {DateTransformer} from '../../util/DateTransformer';
 import {WorkoutSelectorService} from '../../workout-selector.service';
 import {RestService} from '../../service/rest.service';
+import {Router} from '@angular/router';
 
 const romanNumbers = ['I', 'II', 'III', 'IV', 'V', 'VI',
     'VII', 'VIII', 'IX', 'X', 'XI', 'XII'];
@@ -24,8 +25,7 @@ export class WorkoutComponent implements OnInit {
     day: number;
     colourClass: string;
 
-    constructor(private workoutSelector: WorkoutSelectorService, private restService: RestService) {
-    }
+    constructor(private workoutSelector: WorkoutSelectorService, private restService: RestService, private router: Router) { }
 
     ngOnInit(): void {
         this.setDate(this.content.date);
@@ -48,7 +48,7 @@ export class WorkoutComponent implements OnInit {
 
     private deleteWorkout(): void {
         this.unselect();
-        this.restService.deleteWorkout(this.content.id).subscribe();
+        this.restService.deleteWorkout(this.content.id).subscribe(() => this.router.navigate(['/calendar']));
     }
 
 }

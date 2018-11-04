@@ -1,7 +1,7 @@
 import { Attempt } from './attempt';
 import { ClimbType } from './climb-type';
 
-export interface Workout {
+export class Workout {
     id: string;
     date: Date;
     workoutType: ClimbType;

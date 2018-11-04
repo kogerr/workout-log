@@ -17,7 +17,7 @@ export class HeaderComponent implements OnInit {
     menuItems = [
         {path: '/calendar', image: 'calendar-icon.svg'},
         {path: '/statistics', image: 'statistics-icon.svg'},
-        {path: '/add', image: 'plus-icon.svg'}
+        {path: '/workout-editor', image: 'plus-icon.svg'}
     ];
 
     constructor(private router: Router) {
