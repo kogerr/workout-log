@@ -14,7 +14,7 @@ const workoutColourMap = new Map([
 })
 export class AttemptComponent implements OnInit {
     @Input() content: Attempt;
-    @HostBinding('class') class = '';
+    @HostBinding('class') class: string;
 
     ngOnInit(): void {
         this.setStyle();
@@ -39,7 +39,7 @@ export class AttemptComponent implements OnInit {
     getOutline(trackColour: string): string {
         if (trackColour === 'white') {
             let colour: string;
-            switch (trackColour) {
+            switch (this.content.track.type) {
                 case 'boulder':
                     colour = '#dfeff7';
                     break;
@@ -51,8 +51,8 @@ export class AttemptComponent implements OnInit {
                     break;
                 default:
                     colour = '#dfeff7';
-            return '1px solid ' + colour;
             }
+            return '1px solid ' + colour;
         } else {
             return 'none';
         }
