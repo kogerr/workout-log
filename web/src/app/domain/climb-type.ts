@@ -1,5 +1,5 @@
 export enum ClimbType {
     boulder = 'boulder',
-    secured = 'roped',
+    roped = 'roped',
     outdoor = 'outdoor'
 }

@@ -36,4 +36,26 @@ export class AttemptComponent implements OnInit {
         return this.content.track.secondaryColour && this.content.track.grade ? 'auto auto' : 'auto';
     }
 
+    getOutline(trackColour: string): string {
+        if (trackColour === 'white') {
+            let colour: string;
+            switch (trackColour) {
+                case 'boulder':
+                    colour = '#dfeff7';
+                    break;
+                case 'roped':
+                    colour = '#f7eddf';
+                    break;
+                case 'outdoor':
+                    colour = '#dff5ed';
+                    break;
+                default:
+                    colour = '#dfeff7';
+            return '1px solid ' + colour;
+            }
+        } else {
+            return 'none';
+        }
+    }
+
 }

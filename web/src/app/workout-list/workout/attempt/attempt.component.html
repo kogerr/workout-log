@@ -1,4 +1,4 @@
-<div [class]="content.track.colour + ' track '" [style.grid-template-columns]="getGradeColumns()">
+<div [class]="content.track.colour + ' track'" [style.grid-template-columns]="getGradeColumns()" [style.outline]="getOutline(content.track.colour)">
     <div *ngIf="content.track.secondaryColour" [class]="content.track.secondaryColour + ' secondary-colour'"></div>
     <div *ngIf="content.track.grade" class="grade small-font">{{content.track.grade.french}} ({{content.track.grade.uiaa}})</div>
 </div>
