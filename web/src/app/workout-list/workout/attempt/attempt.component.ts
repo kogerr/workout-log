@@ -1,10 +1,12 @@
 import {Component, HostBinding, Input, OnInit} from '@angular/core';
 import {Attempt} from '../../../domain/attempt';
+import {ClimbType} from '../../../domain/climb-type';
+import {Colour} from '../../../domain/colour';
 
-const workoutColourMap = new Map([
-    ['boulder', 'light-blue'],
-    ['roped', 'light-orange'],
-    ['outdoor', 'light-green']
+const workoutColourMap = new Map<ClimbType, string>([
+    [ClimbType.boulder, 'light-blue'],
+    [ClimbType.roped, 'light-orange'],
+    [ClimbType.outdoor, 'light-green']
 ]);
 
 @Component({
@@ -36,17 +38,17 @@ export class AttemptComponent implements OnInit {
         return this.content.track.secondaryColour && this.content.track.grade ? 'auto auto' : 'auto';
     }
 
-    getOutline(trackColour: string): string {
-        if (trackColour === 'white') {
+    getOutline(): string {
+        if (this.content.track.colour === Colour.white) {
             let colour: string;
             switch (this.content.track.type) {
-                case 'boulder':
+                case ClimbType.boulder:
                     colour = '#dfeff7';
                     break;
-                case 'roped':
+                case ClimbType.roped:
                     colour = '#f7eddf';
                     break;
-                case 'outdoor':
+                case ClimbType.outdoor:
                     colour = '#dff5ed';
                     break;
                 default:

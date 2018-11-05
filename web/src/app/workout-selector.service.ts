@@ -1,5 +1,6 @@
 import {Injectable} from '@angular/core';
 import {Workout} from './domain/workout';
+import {ModelParser} from './util/model-parser';
 
 const key = 'selected';
 
@@ -12,7 +13,7 @@ export class WorkoutSelectorService {
     }
 
     public get(): Array<Workout> {
-        return JSON.parse(localStorage.getItem(key)) as Array<Workout>;
+        return (JSON.parse(localStorage.getItem(key)) as Array<Workout>).map(workout => ModelParser.parseWorkout(workout));
     }
 
     public clear(): void {

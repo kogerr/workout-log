@@ -1,13 +1,13 @@
 export enum Colour {
-    white,
-    yellow,
-    brown,
-    green,
-    gray,
-    blue,
-    orange,
-    red,
-    purple,
-    pink,
-    black
+    white = 'white',
+    yellow = 'yellow',
+    brown = 'brown',
+    green = 'green',
+    gray = 'gray',
+    blue = 'blue',
+    orange = 'orange',
+    red = 'red',
+    purple = 'purple',
+    pink = 'pink',
+    black = 'black'
 }

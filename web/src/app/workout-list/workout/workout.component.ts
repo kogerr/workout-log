@@ -4,14 +4,15 @@ import {DateTransformer} from '../../util/DateTransformer';
 import {WorkoutSelectorService} from '../../workout-selector.service';
 import {RestService} from '../../service/rest.service';
 import {Router} from '@angular/router';
+import {ClimbType} from '../../domain/climb-type';
 
 const romanNumbers = ['I', 'II', 'III', 'IV', 'V', 'VI',
     'VII', 'VIII', 'IX', 'X', 'XI', 'XII'];
 
-const workoutColourMap = new Map([
-    ['boulder', 'light-blue'],
-    ['roped', 'light-orange'],
-    ['outdoor', 'light-green']
+const workoutColourMap = new Map<ClimbType, string>([
+    [ClimbType.boulder, 'light-blue'],
+    [ClimbType.roped, 'light-orange'],
+    [ClimbType.outdoor, 'light-green']
 ]);
 
 @Component({
@@ -33,7 +34,7 @@ export class WorkoutComponent implements OnInit {
     }
 
     private setDate(date: any): void {
-        let {month, day}: { month: number, day: number } = DateTransformer.decompose(new Date(date));
+        let {month, day}: { month: number, day: number } = DateTransformer.decompose(date);
         this.month = romanNumbers[month];
         this.day = day;
     }

@@ -52,7 +52,7 @@ body {
     width: 100vw;
     overflow: hidden;
     color: #664F35;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Product Sans', 'Segoe UI', sans-serif;
 }
 
 .small-font {
@@ -118,4 +118,16 @@ body {
 
 .light-green {
     background-color: #dff5ed;
+}
+
+
+@font-face {
+    font-family: Product Sans;
+    src: url('/assets/Product Sans Regular.ttf') format("truetype");
+}
+
+@font-face {
+    font-family: Product Sans;
+    font-weight: bold;
+    src: url('/assets/Product Sans Bold.ttf') format("truetype");
 }
